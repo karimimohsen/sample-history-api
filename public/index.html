@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src='index.js'></script>
+    <script>
+        let route = new Route();
+        route.add(null, null, "/books/123");
+        route.add(null, null, '/apps/456');
+
+        function replace(url) {
+            route.replace(null, null, url)
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Serve Static File with ExpressJs</h3>
+    <button onclick='replace("/books/123")'>
+        Book 123
+    </button>
+    <br/>
+    <button onclick="replace('/apps/456')">
+        App 456
+    </button>
+     <button onclick="replace('/fake')">
+        fake
+    </button>
+</body>
+
+</html>
